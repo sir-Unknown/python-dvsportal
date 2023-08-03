@@ -135,7 +135,7 @@ class DVSPortal:
         self._permits = [{
             "type_id": permit["TypeID"],
             "code": permit["Code"],
-            "zone_code": permit["ZoneCode"],
+#            "zone_code": permit["ZoneCode"], #geeft een error
             "license_plates": {
                 re.sub('[^a-zA-Z\d]', '', license_plate["Value"]): license_plate["Name"]
                 for license_plate in permit["LicensePlates"]},
